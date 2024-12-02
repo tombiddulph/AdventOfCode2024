@@ -6,4 +6,3 @@ Assembly.GetExecutingAssembly().GetTypes().Where(type => type.Name.StartsWith("D
     .OrderByDescending(method => int.Parse(method.DeclaringType!.Name.Replace("Day", string.Empty))).ToList().ForEach(
         method => Console.WriteLine(
             $"{method.DeclaringType!.Name} {method.Name} result: {method.Invoke(null, null)}"));
-            

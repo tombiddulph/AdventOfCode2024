@@ -4,7 +4,7 @@ using System.Collections;
 public static class Day1
 {
     private static readonly Locations locations;
-    
+
     static Day1()
     {
         locations = File.ReadAllLines("inputs/day1.txt").Aggregate(new Locations(), (acc, current) =>
@@ -15,8 +15,8 @@ public static class Day1
             return acc;
         });
     }
-    
-    
+
+
     public static long Part1() => locations.Sort().Distance();
 
     public static long Part2() => locations.Similarity();
